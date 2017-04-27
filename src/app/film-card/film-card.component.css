@@ -1,0 +1,11 @@
+.app-content {
+    margin: 50px auto;
+    max-width: 884px;
+}
+.film-card {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+.example-form {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,26 @@
+
+<form class="example-form">
+  <md-input-container class="example-full-width">
+    <input mdInput placeholder="Film name" name="filmName" [(ngModel)]="filmName" (keyUp.enter)="getFilms()">
+  </md-input-container>
+</form>
+
+<md-grid-list cols="3" rowHeight="700px">
+  <md-grid-tile *ngFor="let film of filmList">
+
+    <md-card class="film-card">
+      <img md-card-image src="{{film.Poster}}">
+
+      <md-card-content>
+        <md-card-title>{{film.Title}}</md-card-title>
+        <p>Year: {{film.Year}}</p>
+        <p>Some text</p>
+      </md-card-content>
+
+      <md-card-actions class="navigation">
+        <button md-button>Show more...</button>
+      </md-card-actions>
+    </md-card>
+
+  </md-grid-tile>
+</md-grid-list>
