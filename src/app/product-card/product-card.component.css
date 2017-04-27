@@ -1,0 +1,9 @@
+.excample-card {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}

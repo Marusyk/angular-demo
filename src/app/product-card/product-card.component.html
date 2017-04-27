@@ -1,0 +1,15 @@
+<md-card class="excample-card">
+  <md-card-header>
+    <md-card-title>{{products[counter].name}}</md-card-title>
+  </md-card-header>
+  <img md-card-image src="{{products[counter].url}}">
+  <md-card-content>
+    <p>
+      {{products[counter].description}}
+    </p>
+  </md-card-content>
+  <md-card-actions class="navigation">
+    <button md-button [disabled]="counter == 0" (click)="previous()">Previous</button>
+    <button md-button [disabled]="counter == max" (click)="next()">Next</button>
+  </md-card-actions>
+</md-card>
