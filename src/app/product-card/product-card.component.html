@@ -9,7 +9,7 @@
     </p>
   </md-card-content>
   <md-card-actions class="navigation">
-    <button md-button [disabled]="counter == 0" (click)="previous()">Previous</button>
-    <button md-button [disabled]="counter == max" (click)="next()">Next</button>
+    <button md-button [disabled]="isPreviousDisabled" (click)="previous()">Previous</button>
+    <button md-button [disabled]="isNextDisabled" (click)="next()">Next</button>
   </md-card-actions>
 </md-card>

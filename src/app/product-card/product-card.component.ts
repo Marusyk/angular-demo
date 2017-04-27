@@ -23,15 +23,24 @@ export class ProductCardComponent implements OnInit {
     this.max = this.products.length - 1;
   }
 
+  isPreviousDisabled: boolean = true;
+  isNextDisabled: boolean = false;
+
   next() {
     if(this.counter < this.max) {
       this.counter++;
+      this.isPreviousDisabled = false;
+    } else {
+      this.isNextDisabled = true;
     }
   }
 
   previous() {
     if(this.counter > 0) {
       this.counter--;
+      this.isNextDisabled = false;
+    } else {
+      this.isPreviousDisabled = true;
     }
   }
 }
