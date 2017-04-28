@@ -9,3 +9,7 @@
 .example-form {
     margin-bottom: 50px;
 }
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}

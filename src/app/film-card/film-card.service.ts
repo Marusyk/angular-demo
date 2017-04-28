@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable'
 export class FilmCardService {
 
   url: string = "http://www.omdbapi.com/?page=1&s=";
+
   constructor(private http: Http) { }
 
   private extractData(res: Response) {
@@ -16,4 +17,5 @@ export class FilmCardService {
   getFilms(filmName: string) {
     return this.http.get(this.url + filmName).map(this.extractData);
   }
+
 }
