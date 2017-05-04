@@ -14,7 +14,7 @@ export class FilmCardComponent implements OnInit {
   constructor(private filmCardService: FilmCardService) { }
 
   ngOnInit() {
-    this.filmName = "Matrix";
+    this.filmName = "Harry Potter";
     this.getFilms();
   }
 

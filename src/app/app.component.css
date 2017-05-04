@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+md-toolbar {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  z-index: 1;
+}
+.mat-sidenav-container {
+  background: #f5f5f5;
+  flex: 1;
+}
+.app-content {
+   margin: 50px auto; 
+   max-width: 830px;
+}
