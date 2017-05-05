@@ -7,9 +7,7 @@
     margin-bottom: 50px;
 }
 .search-form {
+    margin: auto;
+    max-width: 300px;
     margin-bottom: 50px;
-}
-.navigation {
-    display: flex;
-    justify-content: space-between;
 }
