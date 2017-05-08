@@ -8,13 +8,12 @@ import { FilmCardService } from './film-card.service';
 })
 export class FilmCardComponent implements OnInit {
 
-  filmList: Object[] = [];
-  filmName: string;
+  private filmList: Object[] = [];
+  private filmName: string = "Harry Potter";
 
   constructor(private filmCardService: FilmCardService) { }
 
   ngOnInit() {
-    this.filmName = "Harry Potter";
     this.getFilms();
   }
 

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable'
 @Injectable()
 export class FilmCardService {
 
-  url: string = "http://www.omdbapi.com/?page=1&s=";
+  private url: string = "http://www.omdbapi.com/?page=1&s=";
 
   constructor(private http: Http) { }
 
