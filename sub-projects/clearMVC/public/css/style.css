@@ -27,3 +27,7 @@
 	padding: 15px;
 }
 
+.thumbnail {
+	height: 600px;
+	width: 400px;
+}
