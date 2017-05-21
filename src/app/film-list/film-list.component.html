@@ -1,0 +1,15 @@
+<form class="search-form">
+  <md-input-container>
+    <input mdInput placeholder="Film name" name="filmName" [(ngModel)]="filmName" (keyUp.enter)="getFilms()">
+  </md-input-container>
+  <button md-button (click)="getFilms()">Search</button>
+</form>
+
+<md-grid-list cols="2" rowHeight="900px">
+		
+  <md-grid-tile *ngFor="let film of filmList">
+		<film-card [filmId]="film.imdbID"></film-card>
+	</md-grid-tile>
+
+</md-grid-list>
+

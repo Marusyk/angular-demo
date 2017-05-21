@@ -8,12 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
-import { FilmCardService } from './film-card/film-card.service';
+import { FilmListComponent } from './film-list/film-list.component';
+
+import { FilmService } from './film-service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilmCardComponent
+    FilmCardComponent,
+    FilmListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { FilmCardService } from './film-card/film-card.service';
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [FilmCardService],
+  providers: [FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

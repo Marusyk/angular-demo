@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Film catalog';
+
+  links = [
+    { path: '/dashboard', icon: 'home', label: 'Home'},
+    { path: '/filmList', icon: 'list', label: 'All films'},
+    { path: '/profile', icon: 'account_circle', label: 'Profile'}
+  ];
 }
