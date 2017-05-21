@@ -11,16 +11,14 @@
     }
 
     function bindViewFilmReqest() {
-        films.eventHolder.on(
-            films.filmReqEventName,
-            (event, filmName) => getFilms(filmName)
+        films.eventHolder.on(films.filmReqEventName, (event, filmName) =>
+            getFilms(filmName)
         );
     }
 
     function bindModelFilmResponse() {
-        model.eventHolder.on(
-            model.filmRespEventName,
-            (event, filmName) => films.buildFilms(filmName)
+        model.eventHolder.on(model.filmRespEventName, (event, filmName) =>
+            films.buildFilms(filmName)
         );
     }
 
@@ -36,9 +34,9 @@
     function init() {
         initFilms();
         bindEvents();
-        model.getFilms(defaultFilm);
+        getFilms(defaultFilm);
     }
 
     init();
 
-}())
+}());

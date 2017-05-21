@@ -30,15 +30,15 @@
             this.DOMElements.filmsContainer.innerHTML = '';
         },
 
-        buildFilms: function (data) {
+        buildFilms: function(data) {
             console.log(data);
-            this.clearContainer(); 
+            this.clearContainer();
             data.Search.forEach((element, key) =>
-                this.DOMElements.filmsContainer.innerHTML += `<div class="ImgContainer col-sm-3" >
+                this.DOMElements.filmsContainer.innerHTML += `<div class="ImgContainer col-sm-4" >
                                                                     <div class="thumbnail">
                                                                         <img  src="${element.Poster}" height="700px" alt="${element.Title}">
                                                                         <div class="caption">
-                                                                            <h4><a href="#">${element.Title}</a></h4>
+                                                                            <h4><a href="http://www.imdb.com/title/${element.imdbID}">${element.Title}</a></h4>
                                                                             <h5>Year: ${element.Year}</h5>
                                                                         </div>
                                                                     </div>

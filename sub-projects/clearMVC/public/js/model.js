@@ -1,14 +1,14 @@
 'use strict';
 (function () {
 
-    var model = function () {
+    var model = function() {
 
         let eventHolder = $({});
         let filmRespEventName = "filmResponse";
         let filmUrl = "http://www.omdbapi.com/?page=1&s=";
 
         function getFilms(filmName) {
-            $.get(filmUrl + filmName, function (films) {
+            $.get(filmUrl + filmName, films => {
                 if (!films) {
                     return;
                 }
@@ -25,4 +25,4 @@
 
     window.app = window.app || {};
     window.app.model = model();
-}())
+}());
