@@ -10,18 +10,13 @@ import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
 import { FilmListComponent } from './film-list/film-list.component';
 
-import { TimeComponent } from './time/time.component';
-import { CountdownComponent } from './countdown/countdown.component';
-
 import { FilmService } from './film-service';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmCardComponent,
-    FilmListComponent,
-    TimeComponent,
-    CountdownComponent
+    FilmListComponent
   ],
   imports: [
     BrowserModule,
