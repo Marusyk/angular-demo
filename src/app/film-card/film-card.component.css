@@ -1,4 +1,31 @@
-.film-card {
+.film-card-view1 {
   max-width: 300px;
-  margin-bottom: 50px; 
+  height: 900px;
+  margin-bottom: 50px;
+  position: relative;
+}
+img.img-view1 {
+  max-width: 350px;
+  height: 550px;
+}
+button {
+  position: absolute;
+  bottom:10px;
+  right:10px;
+}
+.film-card-view2 {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 50px;
+  display:flex;
+  justify-content: space-around;
+  font-size: 14px;
+  background-color: white;
+  position: relative;
+  padding: 25px 20px 0 0;
+}
+img.img-view2 {
+  width: 250px;
+  height: 350px;
+  margin: 25px 30px;
 }

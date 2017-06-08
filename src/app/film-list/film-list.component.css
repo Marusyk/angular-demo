@@ -1,9 +1,3 @@
-.app-content {
-   margin: 50px auto; 
-   max-width: 884px;
-}
-.search-form {
-    margin: auto;
-    max-width: 300px;
-    margin-bottom: 50px;
+button.btnAdd {
+    margin-left: 570px;
 }

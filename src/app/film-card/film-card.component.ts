@@ -7,8 +7,13 @@ import { FilmService } from '../film-service';
   styleUrls: ['./film-card.component.css']
 })
 export class FilmCardComponent implements OnInit {
+
   @Input()
   filmId: string;
+
+  @Input()
+  view: string;
+
   filmItem: {} = {};
 
   constructor(private filmService: FilmService) { }

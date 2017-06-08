@@ -1,10 +1,12 @@
-<film-search (ev)="getFilms($event)"></film-search>
+<film-search (ev)="addFilms($event)"></film-search>
+<select-view (changeViewEvent)="selectView($event)"></select-view>
 
-<md-grid-list cols="2" rowHeight="900px">
+<md-grid-list cols="2" [rowHeight]="rowHeightRequired">
 		
-  <md-grid-tile *ngFor="let film of filmList">
-		<film-card [filmId]="film.imdbID"></film-card>
+	<md-grid-tile *ngFor="let film of filmList">
+		<film-card [filmId]="film.imdbID" [view]="viewRequired"></film-card>
 	</md-grid-tile>
 
 </md-grid-list>
 
+<!--<button class="btnAdd" md-button (click)="addMoreFilms()">Больше фильмов</button>-->

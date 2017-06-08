@@ -2,3 +2,8 @@
     display: inline-block;
     margin: 0 0 40px 240px;
  }
+ .search-form {
+    margin: auto;
+    max-width: 300px;
+    margin-bottom: 50px;
+}
