@@ -1,0 +1,6 @@
+<form class="search-form">
+  <md-input-container>
+    <input mdInput placeholder="Film name" name="filmName" [(ngModel)]="filmName" (keyUp.enter)="getFilms()">
+  </md-input-container>
+  <button md-button (click)="getFilms()">Search</button>
+</form>

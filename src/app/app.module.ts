@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { FilmCardComponent } from './film-card/film-card.component';
 import { FilmListComponent } from './film-list/film-list.component';
+import { FilmSearchComponent } from './film-search/film-search.component';
 
 import { FilmService } from './film-service';
 
@@ -16,7 +17,8 @@ import { FilmService } from './film-service';
   declarations: [
     AppComponent,
     FilmCardComponent,
-    FilmListComponent
+    FilmListComponent,
+    FilmSearchComponent
   ],
   imports: [
     BrowserModule,

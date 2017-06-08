@@ -15,13 +15,15 @@ export class FilmListComponent implements OnInit {
 
     ngOnInit() {
         this.filmName = "Harry Potter";
-        this.getFilms();
+        this.getFilms(this.filmName);
     }
 
-    private getFilms() {
-        if (!this.filmName) { return; }
-        this.filmService.getFilms(this.filmName).subscribe(data => {
-            this.filmList = data;
-        })
+    private getFilms(filmName: string) {
+        if (!filmName) { return; }
+        this.filmService
+            .getFilms(filmName)
+            .subscribe(data => {
+                this.filmList = data;
+            })
     }
 }
