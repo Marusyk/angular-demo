@@ -22,13 +22,13 @@ export class FilmListComponent implements OnInit {
         this.viewType = "Vertical";
         this.rowHeight = "1080px";
         this.selectView(this.viewType);
-        this.getFilms(this.filmName);
+        this.getFilms(this.pageNumber, this.filmName);
     }
 
-    private getFilms(filmName: string) {
+    private getFilms(page: string, filmName: string): void {
         if (!filmName) { return; }
         this.filmService
-            .getFilms(filmName)
+            .getFilms(page, filmName)
             .subscribe((films: any[]) => {
                 if (films && films.length) {
                     this.filmList = this.filmList.concat(films);
@@ -46,22 +46,17 @@ export class FilmListComponent implements OnInit {
             : this.rowHeight = "450px";
     }
 
-    addMoreFilms(): void {
+    showMoreFilms(): void {
         this.pageNumber = String(parseInt(this.pageNumber) + 1);
-        this.getFilms(this.filmName);
+        this.getFilms(this.pageNumber, this.filmName);
     }
 
-    getNewFilms(filmName: string): void {
-        this.filmName = filmName;
-        this.pageNumber = "1";
-        this.filmList = [];
-        this.getFilms(this.filmName)
-    }
-    addFilms(filmName: string): void {
-        if (this.filmName === filmName) {
-            this.getFilms(this.filmName);
-        } else {
-            this.getNewFilms(filmName);
+    searchFilms(filmName: string): void {
+        if (this.filmName !== filmName) {
+            this.filmName = filmName;
+            this.pageNumber = "1";
+            this.filmList = [];
+            this.getFilms(this.pageNumber, this.filmName)
         }
     }
 }

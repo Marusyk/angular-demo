@@ -1,4 +1,4 @@
-<film-search (ev)="addFilms($event)"></film-search>
+<film-search (ev)="searchFilms($event)"></film-search>
 <select-view (changeViewEvent)="selectView($event)"></select-view>
 
 <md-grid-list cols="2" [rowHeight]="rowHeight">
@@ -9,4 +9,4 @@
 
 </md-grid-list>
 
-<!--<button class="btnAdd" md-button (click)="addMoreFilms()">Больше фильмов</button>-->
+<button class="btnAdd" md-button (click)="showMoreFilms()">Show more</button>

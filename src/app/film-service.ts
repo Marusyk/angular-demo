@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class FilmService {
-    private baseUrl: string = "http://www.omdbapi.com/?page=1&s=";
+    private baseUrl: string = "http://www.omdbapi.com/";
     private filmUrl: string = "http://www.omdbapi.com/?i=";
     private apiKey: string = "&apikey=520bbe17";
 
@@ -20,9 +20,9 @@ export class FilmService {
         return body || {};
     }
 
-    getFilms(filmName: string) {
+    getFilms(page: string, filmName: string) {
         return this.http
-            .get(this.baseUrl + filmName + this.apiKey)
+            .get(this.baseUrl + "?page=" + page + "&s=" + filmName + this.apiKey)
             .map(this.extractList);
     }
 

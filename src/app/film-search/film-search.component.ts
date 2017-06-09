@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class FilmSearchComponent {
 
-    filmName: string;
+    filmName: string = "Harry Potter";
 
     @Output()
     ev: EventEmitter<string> = new EventEmitter();
