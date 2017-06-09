@@ -7,12 +7,18 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class SelectViewComponent {
 
-    viewCards: number;
+    viewType: number;
 
     @Output()
-    changeViewEvent: EventEmitter<number> = new EventEmitter();
+    changeViewEvent: EventEmitter<string> = new EventEmitter();
 
     changeView(): void {
-        this.changeViewEvent.emit(this.viewCards);
+        let view: string = ViewType[this.viewType];
+        this.changeViewEvent.emit(view);
     }
+}
+
+enum ViewType {
+    Vertical = <number> 1,
+    Horizontal = <number> 2
 }

@@ -11,17 +11,17 @@ export class FilmListComponent implements OnInit {
     filmList: Object[] = [];
     filmName: string;
     pageNumber: string;
-    viewRequired: number;
-    rowHeightRequired: string;
+    viewType: string;
+    rowHeight: string;
 
     constructor(private filmService: FilmService) { }
 
     ngOnInit() {
         this.filmName = "Harry Potter";
         this.pageNumber = "1";
-        this.viewRequired = 1;
-        this.rowHeightRequired = "1080px";
-        this.selectView(this.viewRequired);
+        this.viewType = "Vertical";
+        this.rowHeight = "1080px";
+        this.selectView(this.viewType);
         this.getFilms(this.filmName);
     }
 
@@ -39,15 +39,11 @@ export class FilmListComponent implements OnInit {
             })
     }
 
-    selectView(view: number): void {
-        this.viewRequired = view;
-        this.setRowHeight(view);
-    }
-
-    setRowHeight(view: number): void {
-        view == 1
-            ? this.rowHeightRequired = "1080px"
-            : this.rowHeightRequired = "450px";
+    selectView(viewType: string): void {
+        this.viewType = viewType;
+        viewType == "Vertical"
+            ? this.rowHeight = "1080px"
+            : this.rowHeight = "450px";
     }
 
     addMoreFilms(): void {

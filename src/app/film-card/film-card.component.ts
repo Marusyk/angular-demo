@@ -12,7 +12,7 @@ export class FilmCardComponent implements OnInit {
   filmId: string;
 
   @Input()
-  view: string;
+  viewType: string;
 
   filmItem: {} = {};
 

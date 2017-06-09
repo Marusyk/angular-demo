@@ -1,5 +1,5 @@
-<md-card class="film-card-view1" *ngIf="view === 1">
-  <img class="img-view1" md-card-image src="{{filmItem.Poster}}">
+<md-card class="film-card-vertical" *ngIf="viewType === 'Vertical'">
+  <img class="img-vertical" md-card-image src="{{filmItem.Poster}}">
   <md-card-content>
     <md-card-title>{{filmItem.Title}}</md-card-title>
     <p>Year: {{filmItem.Year}} &nbsp;&nbsp;&nbsp; Runtime: {{filmItem.Runtime}} &nbsp;&nbsp;&nbsp; IMDB: {{filmItem.imdbRating}}</p>
@@ -12,18 +12,18 @@
   </md-card-actions>
 </md-card>
 
-<div class="film-card-view2" *ngIf="view === 2">
-  <img class="img-view2" md-card-image src="{{filmItem.Poster}}">
-  <div class="film-content-view2">
+<div class="film-card-horizontal" *ngIf="viewType === 'Horizontal'">
+  <img class="img-horizontal" md-card-image src="{{filmItem.Poster}}">
+  <div class="film-content-horizontal">
     <h2>{{filmItem.Title}}</h2>
-    <p>Производство: {{filmItem.Production}}</p>
-    <p>Страна: {{filmItem.Country}}</p>
-    <p>Релиз: {{filmItem.Released}}</p>
+    <p>Production: {{filmItem.Production}}</p>
+    <p>Country: {{filmItem.Country}}</p>
+    <p>Released: {{filmItem.Released}}</p>
     <p>{{filmItem.Plot}}</p>
-    <p>Продолжительность: {{filmItem.Runtime}}</p>
-    <p>Рейтинг: {{filmItem.imdbRating}}/10</p>
+    <p>Runtime: {{filmItem.Runtime}}</p>
+    <p>IMDB: {{filmItem.imdbRating}}/10</p>
     <md-card-actions>
-      <button md-button>Подробнее</button>
+      <button md-button>Show more</button>
     </md-card-actions>
   </div>
 </div>

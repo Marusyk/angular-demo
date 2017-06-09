@@ -1,9 +1,8 @@
-.example-form {
+.search-form {
     display: inline-block;
-    margin: 0 0 40px 240px;
- }
- .search-form {
     margin: auto;
     max-width: 300px;
     margin-bottom: 50px;
+    margin-right: 5%;
+    margin-left: 25%;
 }
